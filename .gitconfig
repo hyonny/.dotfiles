@@ -1,0 +1,12 @@
+[alias]
+  st = status
+  cm = commit
+  ch = checkout
+  s = stash save
+  df = diff
+  pl = pull
+  ps = push
+  pso = push -u origin
+  cp = cherry-pick
+  br = branch
+
