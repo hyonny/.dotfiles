@@ -37,6 +37,7 @@ set smartcase
 set incsearch
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+set clipboard+=unnamed
 
 " other setting
 set backspace=indent,eol,start
