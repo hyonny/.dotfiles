@@ -44,17 +44,6 @@ set showmatch
 set wildmenu
 set history=5000
 
-" additional highlights
-augroup AdditionalHighlights
-  autocmd!
-	" trailing spaces
-  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
-  autocmd Syntax * syntax match TrailingSpaces /\s\+$/
-	" multi bytes spaces
-	autocmd VimEnter,WinEnter,ColorScheme * highlight ZenkakuSpace term=underline guibg=Red ctermbg=Red
-  autocmd Syntax * syntax match ZenkakuSpace containedin=ALL /　/
-augroup END
-
 " enable mouse
 if has('mouse')
   set mouse=a
@@ -84,7 +73,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
-
+NeoBundle 'bronson/vim-trailing-whitespace'
 "----------------------------------------------------------
 call neobundle#end()
 
