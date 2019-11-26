@@ -10,3 +10,5 @@
   cp = cherry-pick
   br = branch
 
+[commit]
+  template = ~/.commit_template
