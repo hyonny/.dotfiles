@@ -1,0 +1,68 @@
+" 戒め
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+
+" setting
+set fenc=utf-8
+set nobackup
+set noswapfile
+set autoread
+set hidden
+set showcmd
+
+" visual setting
+syntax enable
+set number
+set cursorline
+set cursorcolumn
+set virtualedit=onemore
+set autoindent
+set smartindent
+set showmatch
+set laststatus=2
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set ambiwidth=double
+
+" search option
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" other setting
+set backspace=indent,eol,start
+set showmatch
+set wildmenu
+set history=5000
+
+" additional highlights
+augroup AdditionalHighlights
+  autocmd!
+	" trailing spaces
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd Syntax * syntax match TrailingSpaces /\s\+$/
+	" multi bytes spaces
+	autocmd VimEnter,WinEnter,ColorScheme * highlight ZenkakuSpace term=underline guibg=Red ctermbg=Red
+  autocmd Syntax * syntax match ZenkakuSpace containedin=ALL /　/
+augroup END
+
+" enable mouse
+if has('mouse')
+  set mouse=a
+  if has('mouse_sgr')
+    set ttymouse=sgr
+  elseif v:version > 703 || v:version is 703 && has('patch632')
+    set ttymouse=sgr
+  else
+    set ttymouse=xterm2
+  endif
+endif
