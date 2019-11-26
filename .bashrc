@@ -1,7 +1,7 @@
 alias reload='source ~/.bash_profile'
 
 ### prompt decoration
-source ~/.dotfiles/.git-prompt.sh
+source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
