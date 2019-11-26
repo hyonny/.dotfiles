@@ -74,6 +74,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 "----------------------------------------------------------
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'Yggdroot/indentLine'
 "----------------------------------------------------------
 call neobundle#end()
 
