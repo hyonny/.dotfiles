@@ -66,3 +66,28 @@ if has('mouse')
     set ttymouse=xterm2
   endif
 endif
+
+""""""""""""""""""""
+""" 以下 NeoBundle
+""""""""""""""""""""
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+  if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+    echo "install NeoBundle..."
+    :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+  endif
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+"----------------------------------------------------------
+
+"----------------------------------------------------------
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck
