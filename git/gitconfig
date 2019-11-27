@@ -3,6 +3,7 @@
   cm = commit
   ch = checkout
   s = stash save
+  sp = stash pop
   df = diff
   pl = pull
   ps = push
