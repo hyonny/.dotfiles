@@ -1,6 +1,9 @@
 alias reload="source ~/.bash_profile"
 
 ### prompt decoration
+export CLICOLOR=1
+export LSCOLORS="GxFxCxDxBxegedabagaced"
+
 source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
